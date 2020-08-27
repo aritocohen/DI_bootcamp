@@ -47,21 +47,21 @@
 
 
 
-var numbOfUsers = 8;
-var classOnline = ['Emma', 'David', 'Nadav'];
-// var rest = numbOfUsers - 2;
+// var numbOfUsers = 8;
+// var classOnline = ['Emma', 'David', 'Nadav'];
+// // var rest = numbOfUsers - 2;
 
-console.log(numbOfUsers);
+// console.log(numbOfUsers);
 
-if (numbOfUsers === 0) {
-	console.log('no one online');
-}
-else if (numbOfUsers === 1) {
-	console.log(classOnline[0], 'online');
-}
-else if (numbOfUsers === 2) {
-	console.log(classOnline[0], 'and', classOnline[1], 'online')
-}
-else{
-	console.log(classOnline[0], classOnline[1], 'and 6 more are online')
-}
+// if (numbOfUsers === 0) {
+// 	console.log('no one online');
+// }
+// else if (numbOfUsers === 1) {
+// 	console.log(classOnline[0], 'online');
+// }
+// else if (numbOfUsers === 2) {
+// 	console.log(classOnline[0], 'and', classOnline[1], 'online')
+// }
+// else{
+// 	console.log(classOnline[0], classOnline[1], 'and 6 more are online')
+// }
