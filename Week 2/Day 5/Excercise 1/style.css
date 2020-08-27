@@ -1,0 +1,30 @@
+/*.navbar {
+	background-color: aqua !important;
+}*/
+
+.jumbotron {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	width: 1000px;
+	margin: auto;
+}
+.vid {
+	width: 1000px !important;
+	margin-bottom: 5px;
+	margin: auto;
+	margin-top: 5px;
+}
+.carousel{
+	width: 1000px;
+	margin-bottom: 5px;
+	margin: auto;
+	margin-top: 5px;
+}
+.signup-form {
+	width: 1000px;
+	margin-bottom: 5px;
+	margin: auto;
+	margin-top: 5px;
+}

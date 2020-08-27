@@ -1,0 +1,106 @@
+.topnav{
+	display: flex;
+	width: 100%;
+	margin: 0px auto;
+	overflow: hidden;
+	background-color: #262626;
+}
+
+.topnav p {
+	font-size: 16px;
+	margin-left: 80px;
+	color: grey;
+}
+
+.topnav a{
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 16px;
+	color: grey;
+}
+
+.topnav .btnactive {
+  background-color: black;
+  color: grey;
+}
+
+.topnav form{
+	padding: 14px 16px
+}
+
+.topnav button{
+	background-color: green;
+	border: none;
+	color: white;
+	padding: 5px 11px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: grey;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #262626;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+	background-color: lightgrey;
+	margin-top: -20px;
+}
+
+.container h1 {
+	margin-left: 80px;
+}
+
+.container p {
+	margin-left: 80px;
+}
+
+.container button {
+	margin-left: 80px;
+}
+.row {
+	display: flex;
+	}
+.column {
+	margin-left: 80px;
+	display: 33%;
+}
