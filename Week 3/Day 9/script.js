@@ -37,3 +37,11 @@
 
 
 
+
+// var str =prompt('Put number with numbers and commers');
+
+// 	parseInt.str
+
+// var newnumber = str.split(",");
+
+// console.log(newnumber[0]*newnumber[1]);
