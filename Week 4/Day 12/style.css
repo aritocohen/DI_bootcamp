@@ -1,0 +1,47 @@
+body{
+	display: flex;
+}
+
+#calc{
+  position: relative;
+  width: 300px;
+ /* border: 2px solid black;
+  border-radius: 8px;*/
+ /* margin: 0px auto;*/
+  padding: 20px 20px 20px 20px;
+  background-color: yellow;
+}
+
+input[type = text] {
+	width:280px;
+	height:40px;
+	margin-bottom: 5px;
+}
+
+#button1{
+	 width:70px;
+	 height:70px;
+	 background-color: lightgreen;
+	 margin-bottom: 5px;
+}
+
+#button2{
+	 width:140px;
+	 height:70px;
+	 background-color: blue;
+	 margin-bottom: 5px;
+}
+
+#button4{
+	 width:140px;
+	 height:70px;
+	  background-color: red;
+	  margin-bottom: 5px;
+}
+
+#button3{
+	 width:70px;
+	 height:70px;
+	 background-color: orange;
+	 margin-bottom: 5px;
+}
