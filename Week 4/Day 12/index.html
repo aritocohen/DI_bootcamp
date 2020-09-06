@@ -4,15 +4,13 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" charset="utf-8"></script>
     <style>
     
     </style>
   </head>
   <body>
-        <div id="calc">
-            <div>
-            <input id="result" type="text" name="answer" placeholder="0" />
+        <div id="calcdisplay">
+            <div id=display>0</div>
             <br>
             <button id="button1" type="button" name="button" onclick="javascript:my_f(0);">0</button>
             <button id="button1" type="button" name="button" onclick="javascript:my_f(1);">1</button>
@@ -32,14 +30,12 @@
             <button id="button3" type="button" name="button" onclick="javascript:my_f('-');">-</button>
             <button id="button3" type="button" name="button" onclick="javascript:my_f('*');">*</button>
             <button id="button3" type="button" name="button" onclick="javascript:my_f('/');">/</button>
-            <button id="button3" type="button" name="button" onclick="javascript:my_f('=');">=</button>
+            <button id="button3" type="button" name="button" onclick="javascript:result('=');">=</button>
             <br>
-            </div>
-
-            <div>
+            
             <button id="button2" type="button" name="button" onclick="javascript:my_f('reset');">reset</button>
-            <button id="button4" type="button" name="button" onclick="javascript:my_f('clear');">clear</button>
-            </div>
+            <button id="button4" type="button" name="button" onclick="javascript:calcclear();">clear</button>
         </div>
+    <script src="main.js" charset="utf-8"></script>
     </body>
 </html>
