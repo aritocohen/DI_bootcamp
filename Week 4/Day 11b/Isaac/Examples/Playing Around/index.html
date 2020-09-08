@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>THE DOM</title>
+
+    <style>
+      .my_bg_color {
+        background-color: yellow;
+      }
+
+      .mystyle {
+        background-color: green;
+        color: yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main" class="main-div">
+      <div id="inner" class="inner-div">
+        <p id="my_p_text">Some Text</p>
+      </div>
+
+      <div class="main-div" id="main-1">
+        <img
+          id="my_img"
+          src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        />
+      </div>
+    </div>
+
+    <button
+      onclick="document.getElementById('my_img').src='https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'"
+    >
+      CHANGE IMAGE
+    </button>
+
+    <div class="">
+      <p id="text" class="mystyle">CLASS LIST</p>
+      <button onclick="change()" type="button" name="button">TOGGLE</button>
+
+      <ul id="my_list">
+        <li>One</li>
+      </ul>
+
+      <button onclick="add_li()" type="button" name="button">
+        ADD LIST ITEM
+      </button>
+    </div>
+    <br />
+
+    <script>
+      function domtest() {
+        //BY ID
+
+        // var my_main_div = document.getElementById('main').innerHTML;
+        //   var my_main_divs = document.getElementsByTagName('div');
+        //   for(x in my_main_divs){
+        //   alert(my_main_divs[x].innerHTML);
+        //
+        //    }
+
+        //BY CLASS
+
+        // var my_class_div = document.getElementsByClassName("main-div");
+        // alert(my_class_div);
+        // console.log(my_class_div[0]);
+
+        //BY TAG NAME
+
+        // var  _x = document.getElementsByTagName('div');
+        // alert(_x);
+
+        // var _img = document.getElementById("my_img");
+        // _img.setAttribute('src', 'https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' );
+        // _img.setAttribute('myatt', 'ziv');
+        // alert(_img.getAttribute('myatt'));
+
+        var _myp = document.getElementById("my_p_text");
+        _myp.style.color = "red";
+        _myp.className = "my_bg_color";
+        _myp.innerText = "I changed my text";
+      }
+
+      domtest();
+
+      //TOGGLE
+
+      function change() {
+        var _p = document.getElementById("text");
+        _p.classList.toggle("mystyle");
+      }
+
+      //ADD LIST ITEM
+
+      function add_li() {
+        var my_list = document.getElementById("my_list");
+        var item = document.createElement("li");
+        item.innerText = "two";
+        my_list.appendChild(item);
+      }
+    </script>
+  </body>
+</html>
