@@ -90,4 +90,41 @@
 #     if price <= user_money:
 #         print(f"~ {products} (${price})")
 
+# Ex 2
+contacts = {
+    "Alpha": "053050505",
+    "Beta": "054305305",
+    "Romeo": "434535433",
+}
 
+contacts["Zulu"] = "123214564"
+
+for name, phone_nb in contacts.items():
+    print(f"{name}\t-> {phone_nb}")
+
+searched_name = "alpha"
+
+for name in contacts.keys():
+    if name.lower() == searched_name.lower():
+        print(f"{name} exists in the contacts")
+
+searched_numb = "123214564"
+
+for name, numb in contacts.items():
+    if numb == searched_numb:
+        print(f"{searched_numb} belongs to {name}")
+
+aro_contacts = {
+    "Charlie": "8453423423",
+    "Pepe": "324328654",
+}
+
+for name, numb in aro_contacts.items():
+    contacts[name] = numb
+
+nb_of_contacts = len(contacts.keys())
+print(f"There Are {nb_of_contacts} contacts")
+
+sorted_contacts = sorted(contacts.keys())
+for contacts in sorted_contacts:
+    print(f"{contacts}\t-> {contacts[contacts]}")
