@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #container {
+        position: relative;
+        background: purple;
+        width: 400px;
+        height: 400px;
+        margin-top: 10px;
+
+
+    }
+
+    #box {
+        position: absolute;
+        background: red;
+        width: 30px;
+        height: 30px;
+    }
+
+    .up {
+
+        margin-left: 20px;
+        margin-bottom: 5px;
+    }
+
+    .down {
+        margin-left: 20px;
+        margin-top: 5px;
+    }
+</style>
+
+<body>
+
+    <br />
+    <button class="up" onclick="up()" onkeypress="up()">↑</button>
+
+    <br />
+
+    <button class="left" onclick="left()">←</button>
+
+    <button class="right" onclick="right()">→</button>
+
+    <br />
+
+    <button class="down" onclick="down()">↓</button>
+
+    <br />
+
+
+    <div id="container">
+
+        <div id="box" style="top: 0px; left: 0px;"></div>
+
+    </div>
+
+
+    <script>
+
+        var box = document.getElementById("box");
+
+        function up() {
+
+            box.style.top =
+                "" +
+                Math.min(
+                    Math.max(parseInt(box.style.top ? box.style.top : "0") - 30, 0),
+                    box.parentNode.clientHeight - box.clientHeight
+                ) +
+                "px";
+
+            //box.style.top = (parseInt(box.style.top) - 30) + 'px';
+
+        }
+
+        function right() {
+
+            box.style.left =
+                "" +
+                Math.min(
+                    Math.max(
+                        parseInt(box.style.left ? box.style.left : "0") + 30, 0),
+                    box.parentNode.clientWidth - box.clientWidth
+                ) +
+                "px";
+
+            //box.style.left = (parseInt(box.style.left) + 30) + 'px';
+        }
+
+        function left() {
+
+            box.style.left =
+                "" +
+                Math.min(
+                    Math.max(
+                        parseInt(box.style.left ? box.style.left : "0") - 30, 0),
+                    box.parentNode.clientWidth - box.clientWidth
+                ) +
+                "px";
+
+            //box.style.left = (parseInt(box.style.left) - 30) + 'px';
+        }
+
+        function down() {
+
+            box.style.top =
+                "" +
+                Math.min(
+                    Math.max(parseInt(box.style.top ? box.style.top : "0") + 30, 0),
+                    box.parentNode.clientHeight - box.clientHeight
+                ) +
+                "px";
+
+            //box.style.top = (parseInt(box.style.top) + 30) + 'px';
+        }
+
+
+        //Keys Pressed
+        document.onkeydown = checkKey;
+
+        function checkKey(e) {
+
+            e = e || window.event;
+
+            if (e.keyCode == '38') {
+                // up arrow
+                //box.style.top = (parseInt(box.style.top) - 30) + 'px';
+
+                box.style.top =
+                    "" +
+                    Math.min(
+                        Math.max(parseInt(box.style.top ? box.style.top : "0") - 30, 0),
+                        box.parentNode.clientHeight - box.clientHeight
+                    ) +
+                    "px";
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+                //box.style.top = (parseInt(box.style.top) + 30) + 'px';
+
+                box.style.top =
+                    "" +
+                    Math.min(
+                        Math.max(parseInt(box.style.top ? box.style.top : "0") + 30, 0),
+                        box.parentNode.clientHeight - box.clientHeight
+                    ) +
+                    "px";
+            }
+            else if (e.keyCode == '37') {
+                // left arrow
+                //box.style.left = (parseInt(box.style.left) - 30) + 'px';
+                box.style.left =
+                    "" +
+                    Math.min(
+                        Math.max(
+                            parseInt(box.style.left ? box.style.left : "0") - 30, 0),
+                        box.parentNode.clientWidth - box.clientWidth
+                    ) +
+                    "px";
+            }
+            else if (e.keyCode == '39') {
+                // right arrow
+                //box.style.left = (parseInt(box.style.left) + 30) + 'px';
+
+                box.style.left =
+                    "" +
+                    Math.min(
+                        Math.max(
+                            parseInt(box.style.left ? box.style.left : "0") + 30, 0),
+                        box.parentNode.clientWidth - box.clientWidth
+                    ) +
+                    "px";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

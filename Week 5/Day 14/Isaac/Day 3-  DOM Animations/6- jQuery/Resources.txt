@@ -1,0 +1,6 @@
+https://www.w3schools.com/jquery/jquery_get_started.asp
+
+https://www.w3schools.com/jquery/jquery_examples.asp
+
+https://www.w3schools.com/jquery/jquery_animate.asp
+

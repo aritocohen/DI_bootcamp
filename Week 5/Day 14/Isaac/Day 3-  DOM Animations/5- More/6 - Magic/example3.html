@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      #random-move {
+        background-color: red;
+        width: 2em;
+        height: 2em;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      .container {
+        height: 80vh;
+        width: 80vw;
+        border: 1px solid grey;
+        margin: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="random-move"></div>
+    </div>
+
+    <script>
+      var deltaX = 0;
+      var deltaY = 0;
+
+      function animationframe(timestamp) {
+        var div = document.querySelector("#random-move");
+        if (Math.random() > 0.95) {
+          deltaX = Math.floor(Math.random() * 10);
+          deltaY = Math.floor(Math.random() * 10);
+          if (Math.random() < 0.5) {
+            deltaX *= -1;
+          }
+
+          if (Math.random() < 0.5) {
+            deltaY *= -1;
+          }
+        }
+
+        div.style.top =
+          "" +
+          Math.min(
+            Math.max(parseInt(div.style.top ? div.style.top : "0") + deltaY, 0),
+            div.parentNode.clientHeight - div.clientHeight
+          ) +
+          "px";
+
+
+        div.style.left =
+          "" +
+          Math.min(
+            Math.max(
+              parseInt(div.style.left ? div.style.left : "0") + deltaX, 0),
+            div.parentNode.clientWidth - div.clientWidth
+          ) +
+          "px";
+
+        window.requestAnimationFrame(animationframe);
+      }
+
+      document.addEventListener("DOMContentLoaded", function(event) {
+        window.requestAnimationFrame(animationframe);
+      });
+
+
+
+      //Ref: https://stackoverflow.com/questions/46804748/how-to-keep-this-moving-div-inside-its-parent
+    </script>
+  </body>
+</html>
+

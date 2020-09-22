@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 2px dashed black;
+        top: 50%;
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box-div" class="box" draggable="true"></div>
+
+    <script>
+
+
+      //DOM EVENTS
+
+      var box = document.querySelector("#box-div");
+
+      box.addEventListener("drag", function(event) {
+        box.style.left = event.clientX + "px";
+        box.style.top = event.clientY + "px";
+        console.log("drag" + event.clientX + " " + event.clientY);
+      });
+
+      box.addEventListener("dragover", function(event) {
+        console.log("dragover" + event.clientX + " " + event.clientY);
+      });
+
+      document.addEventListener("dragenter", function(event) {
+        console.log("dragenter" + event.clientX + " " + event.clientY);
+      });
+
+      box.addEventListener("dragend", function(event) {
+        box.style.left = event.clientX + "px";
+        box.style.top = event.clientY + "px";
+        console.log("drop" + event.clientX + " " + event.clientY);
+      });
+      
+    </script>
+  </body>
+</html>

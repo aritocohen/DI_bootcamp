@@ -1,0 +1,27 @@
+/* body{
+  background-color: red;
+} */
+
+
+.box-container{
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: red;
+  margin: auto;
+}
+
+.boxy{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: yellow;
+}
+
+button{
+  width: 150px;
+  height: 150px;
+  margin-top: 50px;
+  margin-left: 700px;
+
+}
