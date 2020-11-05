@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <form methor="POST">
+        {{  form.hidden_tag() }}
+
+        <div>
+            {{  form.name.label }}
+            {{  form.name() }}
+            {% for error in form.name.errors %}
+            <small style="color: red">{{  error }}</small>
+            {%  endfor %}
+        </div>
+
+        <div>
+            {{  form.submit() }}
+        </div>
+    </form>
+{% endblock %}

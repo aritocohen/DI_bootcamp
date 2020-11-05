@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>profile_page</title>
+    </head>
+    <body>
+        <h1>Profile of {{ user['name'] }}</h1>
+        <p>{{ user['name'] }} is {{ user ['age'] }} years old and likes {{ user['hobbies'][0] }}</p>
+        <p>{{ user['name'] }} likes:</p>
+        <ul>
+            {% for hobby in user['hobbies'] %}
+                <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+h1{
+	font-size: 60px;
+}
+#introduction{
+	font-family: "verdana";
+	border: groove grey;
+	text-shadow: 1px 1px
+}
+h1{
+	border: 2px dotted red;
+	padding: 30px;
+	margin: 30px 10px 10px 10px;
+}
+table{
+	font-size: 30px;
+	border: 2px dotted black;
+}
