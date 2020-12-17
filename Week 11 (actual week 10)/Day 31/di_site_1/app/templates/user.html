@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-md-3">
+            <img src={{ url_for('uploaded_file', filename=user.profile_pic_path) }} />
+        </div>
+        <div class="col-md-3">
+            <p>{{ user.name }} ({{ user.age }})</p>
+        </div>
+    </div>
+
+    <div>
+        {% for post in user.posts %}
+            <div class="post-container">
+                <p>{{ post.body }}</p>
+                <small>{{ post.created_at }}</small>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

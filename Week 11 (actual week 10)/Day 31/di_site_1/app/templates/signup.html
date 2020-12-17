@@ -1,19 +1,50 @@
 {% extends "base.html" %}
 
 {% block main %}
-    <form methor="POST">
-        {{  form.hidden_tag() }}
+    <form method="POST" style="width:200px;" enctype=multipart/form-data>
+        {{ form.hidden_tag() }}
 
-        <div>
-            {{  form.name.label }}
-            {{  form.name() }}
+        <div class="form-group">
+            {{ form.name.label }}
+            {{ form.name(class="form-control") }}
             {% for error in form.name.errors %}
-            <small style="color: red">{{  error }}</small>
-            {%  endfor %}
+                <small style="color:red">{{ error }}</small>
+            {% endfor %}
         </div>
 
-        <div>
-            {{  form.submit() }}
+        <div class="form-group">
+            {{ form.pic.label }}
+            {{ form.pic() }}
+            {% for error in form.pic.errors %}
+                <small style="color:red">{{ error }}</small>
+            {% endfor %}
         </div>
+
+        <div class="form-group">
+            {{ form.age.label }}
+            {{ form.age(class="form-control") }}
+            {% for error in form.age.errors %}
+                <small style="color:red">{{ error }}</small>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.password.label }}
+            {{ form.password(class="form-control") }}
+            {% for error in form.password.errors %}
+                <small style="color:red">{{ error }}</small>
+            {% endfor %}
+        </div>
+
+        <div class="form-group">
+            {{ form.confirm_password.label }}
+            {{ form.confirm_password(class="form-control") }}
+            {% for error in form.password.errors %}
+                <small style="color:red">{{ error }}</small>
+            {% endfor %}
+        </div>
+
+        {{ form.submit(class="btn btn-primary") }}
     </form>
 {% endblock %}
+

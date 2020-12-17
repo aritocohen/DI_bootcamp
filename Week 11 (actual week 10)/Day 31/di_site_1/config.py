@@ -1,12 +1,19 @@
+
 import os
 
-class Config:
-    def __init__(self):
+# __name__ = "__init__.py"
+# os.path.dirname("__init__.py") --> app/
+# os.path.abspath("app") --> "/home/eyal/documents/di/python-bootcamp/class_11/di_site/app"
 
-        basedir = os.path.abspath(os.path.dirname(__name__))
+class Config:
+
+    def __init__(self):
+        self.basedir = os.path.abspath(os.path.dirname(__name__))
+
+        self.UPLOAD_FOLDER = os.path.join(self.basedir, "app/uploads")
 
         self.SECRET_KEY = "chocolate"
+        self.SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(self.basedir, "di_site.db")
 
-        self.SQLALCHEMY_DATABASE_URI = "sqlite:///di_site.db" + os.path.join(self.basedir, "di_site.db")
 
-config = Config()
+conf = Config()
