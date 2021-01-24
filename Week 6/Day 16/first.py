@@ -1,4 +1,4 @@
-# print('Hello world')
+print('Hello world')
 # my_name = 'Ariel'
 # my_lastName = 'Cohen'
 # my_age = 29
